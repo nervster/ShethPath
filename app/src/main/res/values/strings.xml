@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ShethPath</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Paste BOTH strings as required -->
+    <string name="back4app_app_id">Zc5T7oys0BEfm435YLMi2Tg74hU4EdvZuuUVZmU1</string>
+    <string name="back4app_client_key">HFTyjkcSeHRVzAsEGaM7W0JovLRlBZ4gmjrkuFx4</string>
+    <string name="logout">Log Out</string>
+    <string name="compose_post">Compose Post</string>
+
+</resources>
