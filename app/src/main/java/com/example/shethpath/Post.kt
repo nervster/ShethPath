@@ -32,6 +32,18 @@ class Post: ParseObject() {
         put(KEY_USER, parseUser)
     }
 
+    fun getId(): String? {
+        return getString(KEY_ID)
+    }
+
+    fun getLike(): Int {
+        return getInt(KEY_LIKECOUNT)
+    }
+
+    fun setLike(likeCount: Int) {
+        put(KEY_LIKECOUNT, likeCount)
+    }
+
 
 
 
@@ -39,6 +51,8 @@ class Post: ParseObject() {
         const val KEY_DESCRIPTION = "description"
         const val KEY_USER = "user"
         const val KEY_IMAGE = "image"
+        const val KEY_ID = "objectId"
+        const val KEY_LIKECOUNT = "likeCount"
 
     }
 }

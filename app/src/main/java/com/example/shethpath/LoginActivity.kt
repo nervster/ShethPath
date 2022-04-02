@@ -25,7 +25,7 @@ class LoginActivity : AppCompatActivity() {
         // check if user has been logged in
         if (ParseUser.getCurrentUser() != null) {
             // if logged in, then take to main activity
-            goToFeedActivity()
+            goToMainActivity()
         }
 
 
@@ -55,7 +55,7 @@ class LoginActivity : AppCompatActivity() {
             e ->
             if (e== null) {
                 Log.i(TAG, "Sign Up Successful")
-                goToFeedActivity()
+                goToMainActivity()
             } else {
                 e.printStackTrace()
             }
@@ -70,7 +70,7 @@ class LoginActivity : AppCompatActivity() {
         ParseUser.logInInBackground(username, password, ({user, e ->
             if (user != null) {
                 Log.i(TAG, "Log in Successful")
-                goToFeedActivity()
+                goToMainActivity()
 
             } else {
                 Toast.makeText(this, "Error Logging in", Toast.LENGTH_SHORT).show()
@@ -79,9 +79,10 @@ class LoginActivity : AppCompatActivity() {
         }))
     }
 
-    private fun goToFeedActivity() {
-        val intent = Intent(this@LoginActivity, FeedActivity::class.java)
+    private fun goToMainActivity() {
+        val intent = Intent(this@LoginActivity, MainActivity::class.java)
         startActivity(intent)
+
 
     }
 
