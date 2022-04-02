@@ -81,7 +81,7 @@ open class ComposeFragment : Fragment() {
             } else {
                 Log.i(MainActivity.TAG, "Successfully saved post")
                 // reset description and image view to empty
-//                    finish()
+                getActivity()?.finish()
             }
         }
 
